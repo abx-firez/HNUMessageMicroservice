@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "HNUMessageMicroserviceAPI-Testing",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
