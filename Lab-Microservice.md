@@ -72,7 +72,7 @@ In dieser Anleitung wird beschrieben, wie Sie einen Microservice mit Spring Boot
 
 ### SQLite-JDBC-Treiber hinzufügen
 
-Da Spring Boot SQLite nicht nativ unterstützt, müssen Sie den SQLite-JDBC-Treiber manuell in der `pom.xml`-Datei hinzufügen. Fügen Sie dort die folgende Abhängigkeiten ein (achten Sie darauf, dass Sie es in den richtigen Bereich der `pom.xml`-Datei einfügen):
+Da Spring Boot SQLite nicht nativ unterstützt, müssen Sie den SQLite-JDBC-Treiber manuell in der `pom.xml`-Datei hinzufügen. Fügen Sie dort die folgenden Abhängigkeiten ein (achten Sie darauf, dass Sie es in den richtigen Bereich der `pom.xml`-Datei einfügen):
 
 ```xml
 <dependency>
@@ -80,7 +80,6 @@ Da Spring Boot SQLite nicht nativ unterstützt, müssen Sie den SQLite-JDBC-Trei
     <artifactId>sqlite-jdbc</artifactId>
     <version>3.47.0.0</version>
 </dependency>
-
 <dependency>
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-community-dialects</artifactId>
@@ -245,3 +244,18 @@ Natürlich können Sie auch den Browser verwenden, um zumindest den GET-Endpunkt
 ---
 
 Gratulation :-), Sie haben nun Ihren ersten Microservice in einem der weltweit am meisten verbreitetsten Frameworks geschrieben. 
+
+---
+
+## Lab - extended: Erweiterungen für live coding
+
+1. **PUT /api/messages/{id}**: Implementieren Sie einen PUT-Endpunkt, um eine Nachricht zu aktualisieren. Testen Sie den Endpunkt mit Bruno/Postman. 
+2. **DELETE /api/messages/{id}**: Implementieren Sie einen DELETE-Endpunkt, um eine Nachricht zu löschen. Testen Sie den Endpunkt mit Bruno/Postman.
+3. **Validierung**: Fügen Sie mindestens eine Validierung für die Eingabedaten hinzu, z.B. um sicherzustellen, dass die Nachricht nicht leer ist.
+4. **Fehlerbehandlung**: Implementieren Sie eine benutzerfreundliche Fehlerbehandlung und Rückgabe von Fehlermeldungen für die folgenden Fehler:
+   1. Ungültige Anfragen (z.B. fehlende Pflichtfelder), Fehlercode 400
+   2. Nicht gefundene Ressourcen (z.B. Nachricht mit einer bestimmten ID), Fehlercode 404
+   3. Interne Serverfehler (z.B. Datenbankfehler), Fehlercode 500
+5. **Weitere Entitäten**: Fügen Sie eine neue Entität hinzu, z. B. `User`, und erstellen Sie eine Beziehung zwischen `User` und `Message`. Implementieren Sie entsprechende Endpunkte, um Benutzer und Nachrichten zu verwalten. Erweitern Sie die Datenbanktabellen und Entitäten entsprechend.
+6. **Suchfunktion**: Fügen Sie eine Suchfunktion hinzu, um Nachrichten basierend auf ihrem Inhalt zu durchsuchen. Die Suche soll mittels eines GET-Endpunkts mit einem Suchparameter durchgeführt werden. Der Endpunkt soll alle Nachrichten zurückgeben, die den Suchparameter enthalten. Testen Sie die Suchfunktion mit verschiedenen Suchbegriffen.
+
