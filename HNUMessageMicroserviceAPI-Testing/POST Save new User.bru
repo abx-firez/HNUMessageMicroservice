@@ -1,17 +1,17 @@
 meta {
-  name: POST Save new Message
+  name: POST Save new User
   type: http
   seq: 3
 }
 
 post {
-  url: 127.0.0.1:8080/api/messages
+  url: 127.0.0.1:8080/api/users
   body: json
   auth: none
 }
 
 body:json {
   {
-   "content":"Fooooo!" 
+   "name":"Hans Meier" 
   }
 }

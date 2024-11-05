@@ -1,0 +1,21 @@
+meta {
+  name: POST Save new Message for User 1
+  type: http
+  seq: 4
+}
+
+post {
+  url: 127.0.0.1:8080/api/messages?userId=1
+  body: json
+  auth: none
+}
+
+params:query {
+  userId: 1
+}
+
+body:json {
+  {
+    "content": "Juhu eine neue Message"
+  }
+}

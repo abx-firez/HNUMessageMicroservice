@@ -1,0 +1,15 @@
+meta {
+  name: GET Search Messages
+  type: http
+  seq: 8
+}
+
+get {
+  url: 127.0.0.1:8080/api/messages/search?query=drei
+  body: none
+  auth: none
+}
+
+params:query {
+  query: drei
+}
