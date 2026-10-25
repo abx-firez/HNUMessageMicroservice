@@ -1,0 +1,19 @@
+meta {
+  name: POST Nachricht fuer Benutzer 1
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/messages
+  body: json
+  auth: none
+}
+
+body:json {
+  { "content": "Alle guten Dinge sind drei", "userId": 1 }
+}
+
+assert {
+  res.status: eq 201
+}

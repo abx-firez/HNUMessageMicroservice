@@ -1,0 +1,19 @@
+meta {
+  name: Fehler 404 - unbekannte Nachricht
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{baseUrl}}/api/messages/9999
+  body: json
+  auth: none
+}
+
+body:json {
+  { "content": "gibt es nicht" }
+}
+
+assert {
+  res.status: eq 404
+}

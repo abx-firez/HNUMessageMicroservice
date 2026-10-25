@@ -1,4 +1,4 @@
-package com.hnu.HNUMessageMicroservice;
+package com.hnu.hnumessagemicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

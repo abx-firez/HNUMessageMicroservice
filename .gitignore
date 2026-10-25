@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Lab: Datenbankdatei und Zugangsdaten nicht einchecken ###
+*.db
+.env

@@ -1,0 +1,19 @@
+meta {
+  name: PUT Benutzer 1 aendern
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/users/1
+  body: json
+  auth: none
+}
+
+body:json {
+  { "name": "Hans Mueller" }
+}
+
+assert {
+  res.status: eq 200
+}

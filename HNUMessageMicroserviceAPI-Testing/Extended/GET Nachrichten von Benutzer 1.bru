@@ -1,0 +1,15 @@
+meta {
+  name: GET Nachrichten von Benutzer 1
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/users/1/messages
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}

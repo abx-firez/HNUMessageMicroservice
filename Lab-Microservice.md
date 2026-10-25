@@ -388,7 +388,7 @@ Gratulation :-) Sie haben nun Ihren ersten Microservice in einem der weltweit am
    `List<Message> findByContentContainingIgnoreCase(String teil);`
    und im Controller `@GetMapping(params = "q")` mit `@RequestParam String q`. Spring Data leitet die Abfrage aus dem Methodennamen ab.
 
-7. **DTO statt Entität** (empfohlen, wenn Zeit bleibt): Führen Sie einen eigenen Typ `MessageRequest` für die Eingabe und `MessageResponse` für die Ausgabe ein, in Java 21 jeweils ein `record`. Die Entität verlässt damit nie die Fachschicht. Danach brauchen Sie die Zeile `message.setId(null)` nicht mehr: Die ID lässt sich gar nicht erst von außen setzen.
+7. **DTO statt Entität**: Führen Sie einen eigenen Typ `MessageRequest` für die Eingabe und `MessageResponse` für die Ausgabe ein, in Java 21 jeweils ein `record`. Die Entität verlässt damit nie die Fachschicht. Danach brauchen Sie die Zeile `message.setId(null)` nicht mehr: Die ID lässt sich gar nicht erst von außen setzen.
 
 8. **Logging** (Anschluss an den Logging-Teil der Vorlesung): Ergänzen Sie im Controller
    `private static final Logger log = LoggerFactory.getLogger(MessageController.class);`

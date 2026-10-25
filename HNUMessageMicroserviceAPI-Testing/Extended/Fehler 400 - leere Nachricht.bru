@@ -1,0 +1,19 @@
+meta {
+  name: Fehler 400 - leere Nachricht
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/messages
+  body: json
+  auth: none
+}
+
+body:json {
+  { "content": "   " }
+}
+
+assert {
+  res.status: eq 400
+}

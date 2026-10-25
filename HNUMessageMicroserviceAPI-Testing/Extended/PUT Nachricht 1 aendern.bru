@@ -1,0 +1,19 @@
+meta {
+  name: PUT Nachricht 1 aendern
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/api/messages/1
+  body: json
+  auth: none
+}
+
+body:json {
+  { "content": "Geaenderter Text", "userId": 1 }
+}
+
+assert {
+  res.status: eq 200
+}

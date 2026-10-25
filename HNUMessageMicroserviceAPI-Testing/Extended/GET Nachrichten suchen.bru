@@ -1,0 +1,19 @@
+meta {
+  name: GET Nachrichten suchen
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/messages?q=drei
+  body: none
+  auth: none
+}
+
+params:query {
+  q: drei
+}
+
+assert {
+  res.status: eq 200
+}

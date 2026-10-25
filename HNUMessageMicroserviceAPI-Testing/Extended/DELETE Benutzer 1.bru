@@ -1,0 +1,15 @@
+meta {
+  name: DELETE Benutzer 1
+  type: http
+  seq: 13
+}
+
+delete {
+  url: {{baseUrl}}/api/users/1
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 204
+}

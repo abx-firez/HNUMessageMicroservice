@@ -1,4 +1,4 @@
-package com.hnu.HNUMessageMicroservice;
+package com.hnu.hnumessagemicroservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
